@@ -32,20 +32,20 @@ const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
 const numeros = '0123456789';
 const simbolos = '!@%*?';
 
-const chekbox = document.querySelectorAll('.chekbox');
+const chekcbox = document.querySelectorAll('.chekbox');
 
 function gerasenha() {
     let alfabeto = '';
-        if (chekbox[0].cheked)  {
+        if (chekcbox[0].checked)  {
             alfabeto =alfabeto + letrasMinusculas;
         }
-         if (chekbox[1].cheked)  {
+         if (chekcbox[1].checked)  {
             alfabeto =alfabeto + letrasMaiusculas;
         }
-         if (chekbox[2].cheked)  {
+         if (chekcbox[2].checked)  {
             alfabeto =alfabeto + numeros;
         }
-         if (chekbox[3].cheked)  {
+         if (chekcbox[3].checked)  {
             alfabeto =alfabeto + simbolos;
         }
         console.log(alfabeto);
@@ -60,6 +60,6 @@ function gerasenha() {
 
 gerasenha();
 
-for (i=0; i< chekbox.length; i++) {
-    chekbox[i].onclik = geraSenha;
+for (i=0; i< chekcbox.length; i++) {
+    chekcbox[i].onclik = geraSenha;
 }
