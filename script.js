@@ -32,34 +32,34 @@ const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
 const numeros = '0123456789';
 const simbolos = '!@%*?';
 
-const chekcbox = document.querySelectorAll('.chekbox');
+const checkbox = document.querySelectorAll('.checkbox');
 
-function gerasenha() {
+function geraSenha() {
     let alfabeto = '';
-        if (chekcbox[0].checked)  {
-            alfabeto =alfabeto + letrasMinusculas;
-        }
-         if (chekcbox[1].checked)  {
-            alfabeto =alfabeto + letrasMaiusculas;
-        }
-         if (chekcbox[2].checked)  {
-            alfabeto =alfabeto + numeros;
-        }
-         if (chekcbox[3].checked)  {
-            alfabeto =alfabeto + simbolos;
-        }
-        console.log(alfabeto);
-        let senha = '';
-        for (let i=0; i < tamanhoSenha; i++) {
-            let numeroAleatorio = math.random()*alfabeto.length;
-            numeroAleatorio = math.floor(numeroAleatorio);
-            senha = senha + alfabeto[numeroAleatorio];
-        }
-        campoSenha.value = senha;
+    if (checkbox[0].checked) {
+        alfabeto =alfabeto + letrasMaiusculas;
+    }
+    if (checkbox[1].checked) {
+        alfabeto =alfabeto + letrasMinusculas;
+    }
+    if (checkbox[2].checked) {
+        alfabeto =alfabeto + numeros;
+    }
+    if (checkbox[3].checked) {
+        alfabeto =alfabeto + simbolos;
+    }
+    console.log(alfabeto);
+    let senha = '';
+    for (let i=0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random()*alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
+    campoSenha.value = senha;
 }
 
-gerasenha();
+geraSenha();
 
-for (i=0; i< chekcbox.length; i++) {
-    chekcbox[i].onclik = geraSenha;
+for (i=0; i< checkbox.length; i++) {
+    checkbox[i].onclick = geraSenha;
 }
