@@ -56,13 +56,10 @@ function geraSenha() {
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
+    classificaSenha(alfabeto.length);
 }
 
 geraSenha();
-
-for (i=0; i< checkbox.length; i++) {
-    checkbox[i].onclick = geraSenha;
-}
 
 geraSenha();
 
@@ -72,7 +69,7 @@ function classificaSenha(tamanhoAlfabeto){
     focaSenha.classlist.remove('fraca', 'media', 'forte');
     if (entropia > 57) {
         forcaSenha.classlist.add('forte');
-     } else if (entropia > 35 && <57) {
+     } else if (entropia > 35 && entropia < 57) {
         forcaSenha.classlist.add('media');
      } else if (entropia <= 35) {
         forcaSenha.classlist.add('fraca');
