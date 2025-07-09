@@ -59,7 +59,9 @@ function geraSenha() {
     classificaSenha(alfabeto.length);
 }
 
-geraSenha();
+for (i = 0; i < checkbox.length; i++) {
+        chekbox[i].onclick = geraSenha;
+}
 
 geraSenha();
 
